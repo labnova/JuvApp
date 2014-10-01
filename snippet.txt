@@ -1,0 +1,48 @@
+<div class="container" ng-controller="MyController">
+		<h1>Lista di libri</h1>
+			<ul>
+				
+				
+				
+				<h2>{{author.name}}</h2>
+				<p>{{author.title}}</p>
+				<p>{{author.company | uppercase}}</p>
+				
+			</ul>
+			
+			
+			</ul>	
+			
+			
+			
+			
+	</div>
+
+-------------
+
+
+myNameSpace.controller('MyController', function myController($scope) {
+
+$scope.giocatori= [
+	{
+	"nome": "Gianluigi Buffon",
+	"minuti_giocati": "180",
+	"partite_giocate": "2"
+	},
+
+	{
+	"nome": "Marco Storari",
+	"minuti_giocati": "0",
+	"partite_giocate": "0"
+	},
+
+	{
+	"nome": "Giorgio Chiellini",
+	"minuti_giocati": "0",
+	"partite_giocate": "0"
+	}
+
+	]
+			
+	
+});

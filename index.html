@@ -1,0 +1,59 @@
+<html ng-app>
+<head>
+<title>App</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+	
+	<script type="text/javascript" src="js/lib/angular.min.js"></script>
+	<script type="text/javascript" src="js/libri.js"></script>
+	<style type="text/css">
+	
+	.container {
+		margin:40px;
+		width:50%;
+		position:relative;
+		display:block;
+		margin-left:auto;
+		margin-right:auto;
+		border:2px solid orange;
+	
+	}
+	
+		body  {
+		text-align:center;
+		margin:30px;
+		
+		}
+		
+		li {
+			list-style-type:none !important;
+		}
+		
+	</style>
+</head>
+<body>
+	<h1>Benvenuto {{name}}!</h1>
+	<input placeholder="inserisci il tuo nome..." ng-model="name" />
+	<div class="container" ng-controller="Libri">
+		<h1>Lista di libri</h1>
+			<ul ng-repeat="libro in libri">
+				<a href="" ng-click="setLibri(libro.titolo)"><li>{{libro.titolo}}</li></a>
+				
+				<!--<li>{{libro.titolo}}</li>
+				<li>{{libro.autore}}</li>
+				<li>{{libro.categoria | uppercase}}</li> -->
+			</ul>
+			
+			<p ng-show="libriCorrenti">Libro scelto:</p>
+			<ul>
+				<li> <h2>{{libriCorrenti.titolo}}</li></h2>
+				 <li><img src="img/{{libriCorrenti.img}}.jpg" alt="copertina" /></li>
+				<li> {{libriCorrenti.autore}}</li>
+				<li> {{libriCorrenti.categoria}}</li>
+			</ul>	
+			
+			
+	</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<section class="calciatoreinfo">
+	<div class="calciatore cf" ng-model="giocatori">
+	<a href="#/dettagli/{{prevItem}}" class="btn-btn-left">&lt;</a>
+	<a href="#/dettagli/{{nextItem}}" class="btn-btn-right">&gt;</a>
+	<h1>{{giocatori[whichItem].nome}}</h1>
+	<div class="info">
+	<div class="info">
+					<img ng-src="img/{{giocatori[whichItem].nome}}_tn.jpg" alt="{{giocatori[whichItem].nome}}" />
+
+					
+				
+					<h2>Minuti giocati: {{giocatori[whichItem].minuti_giocati}}</h2>
+					<h4>Partite giocate: {{giocatori[whichItem].partite_giocate}}</h4>
+					</div>
+	</div>
+	<a href="index2.html">Torna indietro</a>
+	</div>
+</section>

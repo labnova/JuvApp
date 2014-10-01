@@ -1,0 +1,49 @@
+<section>
+
+	<div class="search">
+		<h1>Cerca </h1>
+		<label>le caratteristiche del giocatore</label>
+		<input ng-model="query" placeholder="cerca..." autofocus>
+		<label class="formgroup">per:
+
+		<select ng-model="ordineGiocatori">
+			<option value="nome">Nome</option>
+			<option value="partite">Partite</option>
+		</select>
+		</label>
+
+		<label class="formgroup">
+			<input type="radio" ng-model="direction" name="direction" checked>	
+		Ascendente
+		</label>
+		<label class="formgroup">	
+			<input type="radio" ng-model="direction" name="direction" value="reverse">
+		Discendente
+		</label>
+		</div>
+
+			<h1>Lista di giocatori</h1>
+				<ul class="giocatorelist">
+					<li ng-animate="'animate'" class="giocatore cf" ng-repeat="item in giocatori |filter:query | orderBy: ordineGiocatori:direction  ">
+					<a href="#/dettagli/{{giocatori.indexOf(item)}}">
+					<div class="info">
+					<img ng-src="img/{{ item.nome}}_tn.jpg" alt="{{item.nome}}" />
+
+					<h3>Nome: {{item.nome | uppercase}}</h3>
+				
+					<h2>Minuti giocati: {{item.minuti_giocati}}</h2>
+					<h4>Partite giocate: {{item.partite_giocate}}</h4>
+					</div>
+					</a>
+					</li>
+				</ul>
+				
+				
+				</ul>	
+				
+				
+				
+				
+		</div>
+
+</section>
